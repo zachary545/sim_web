@@ -1,401 +1,425 @@
-<audio autoplay preload="auto">
-	<source src="https://zachary545.github.io/sim/www/assets/sound/VR_audio.mp3" type="audio/mpeg">
-</audio>
-<a-scene embedded>
-	<a-image src="url(https://zachary545.github.io/sim/www/assets/images/headphones.png)" opacity="0"  position="0 3 -3"  visible="true">
-	  <a-animation attribute="opacity" from="0" to="1" begin="0" dur="2000"></a-animation>
-	  <a-animation attribute="opacity" from="1" to="0" begin="10000" dur="1000"></a-animation>
-	  <a-animation attribute="visible" begin="11000" to="false"></a-animation>
-	  <a-animation attribute="rotation" begin="0" dur="2000" fill="forwards" to="0 360 0" repeat="3"></a-animation>
-	</a-image>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Explore! SIM Global</title>
+	
+	<!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/main.css" rel="stylesheet">
+	
+	<script src="js/aframe-v0.5.0.min.js"></script>
+  </head>
+  <body>
+		<audio autoplay preload="auto">
+			<source src="https://zachary545.github.io/sim/www/assets/sound/VR_audio.mp3" type="audio/mpeg">
+		</audio>
+		<a-scene embedded>
+			<a-image src="url(https://zachary545.github.io/sim/www/assets/images/headphones.png)" opacity="0"  position="0 3 -3"  visible="true">
+			  <a-animation attribute="opacity" from="0" to="1" begin="0" dur="2000"></a-animation>
+			  <a-animation attribute="opacity" from="1" to="0" begin="10000" dur="1000"></a-animation>
+			  <a-animation attribute="visible" begin="11000" to="false"></a-animation>
+			  <a-animation attribute="rotation" begin="0" dur="2000" fill="forwards" to="0 360 0" repeat="3"></a-animation>
+			</a-image>
 
-	<a-entity text="font: roboto; value: Please put on your headphones for a better experience; width: 3; align: center " position="0 2 -3" visible="true">
-		<a-animation attribute="opacity" from="0" to="1" begin="0" dur="2000"></a-animation>
-		<a-animation attribute="opacity" from="1" to="0" begin="9000" dur="1000"></a-animation>
-		<a-animation attribute="visible" begin="11000" to="false"></a-animation>
-	</a-entity>
+			<a-entity text="font: roboto; value: Please put on your headphones for a better experience; width: 3; align: center " position="0 2 -3" visible="true">
+				<a-animation attribute="opacity" from="0" to="1" begin="0" dur="2000"></a-animation>
+				<a-animation attribute="opacity" from="1" to="0" begin="9000" dur="1000"></a-animation>
+				<a-animation attribute="visible" begin="11000" to="false"></a-animation>
+			</a-entity>
 
-	<a-sky color="#000" visible="true">
-		<a-animation attribute="color" from="#000" to="#6EBAA7" begin="10000" dur="2000"></a-animation>
-		<a-animation attribute="visible" begin="12000" to="false"></a-animation>
-	</a-sky>
+			<a-sky color="#000" visible="true">
+				<a-animation attribute="color" from="#000" to="#6EBAA7" begin="10000" dur="2000"></a-animation>
+				<a-animation attribute="visible" begin="12000" to="false"></a-animation>
+			</a-sky>
 
-	<!-- Dialogue Box Background-->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="12000" to="true"></a-animation>
-		<a-entity geometry="width:0.01" position="0 0.8 -1.21" rotation="0 90 0" scale="0 0.4 1.1" material="opacity:1; color:white; "></a-entity>
-		<a-animation attribute="visible" begin="285000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Dialogue Box Background-->
-	
-	<!-- Welcome Dialogue -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="12000" to="true"></a-animation>
-		<a-entity id="dialogue" text="font: roboto; value: Hello there! Welcome to Singapore Institute of Management Global, SIM for short. My name is Sarah, a local student here and I’ll be your tour guide. I will be taking you to various locations on the campus in a 360 panorama. Let's get started and discover some of what makes SIM Global such an awesome place to learn! ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
-		<a-animation attribute="visible" begin="37000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Welcome Dialogue -->
-	
-	<!-- Welcome Sign -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="12000" to="true"></a-animation>
-		<a-entity id="signs" text="font: roboto; value: Welcome To SIM; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
-		<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
-		<a-sky color="#6EBAA7"></a-sky>
-		<a-animation attribute="visible" begin="27000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Welcome Sign -->
+			<!-- Dialogue Box Background-->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="12000" to="true"></a-animation>
+				<a-entity geometry="width:0.01" position="0 0.8 -1.21" rotation="0 90 0" scale="0 0.4 1.1" material="opacity:1; color:white; "></a-entity>
+				<a-animation attribute="visible" begin="285000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Dialogue Box Background-->
+			
+			<!-- Welcome Dialogue -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="12000" to="true"></a-animation>
+				<a-entity id="dialogue" text="font: roboto; value: Hello there! Welcome to Singapore Institute of Management Global, SIM for short. My name is Sarah, a local student here and I’ll be your tour guide. I will be taking you to various locations on the campus in a 360 panorama. Let's get started and discover some of what makes SIM Global such an awesome place to learn! ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
+				<a-animation attribute="visible" begin="37000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Welcome Dialogue -->
+			
+			<!-- Welcome Sign -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="12000" to="true"></a-animation>
+				<a-entity id="signs" text="font: roboto; value: Welcome To SIM; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
+				<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
+				<a-sky color="#6EBAA7"></a-sky>
+				<a-animation attribute="visible" begin="27000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Welcome Sign -->
 
-	<!-- Foyer & Plaza -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="27000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_foyer_1.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="27000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="35000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="37000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="37000" to="true"></a-animation>
-		<a-entity id="dialogue" text="font: roboto; value: Right now, we are at THE PLAZA, leading to Block A where most students will be during their time in SIM. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_foyer_2.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="37000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="45000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="47000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Foyer & Plaza -->
+			<!-- Foyer & Plaza -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="27000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_foyer_1.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="27000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="35000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="37000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="37000" to="true"></a-animation>
+				<a-entity id="dialogue" text="font: roboto; value: Right now, we are at THE PLAZA, leading to Block A where most students will be during their time in SIM. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_foyer_2.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="37000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="45000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="47000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Foyer & Plaza -->
 
-	<!-- Mural Wall -->
-	<a-entity id="dialogue" text="font: roboto; value: Here we have the MURAL WALL, this is the heart and soul of SIM, and it represents the various students pursuing different degrees and dreams, bringing together students from all walks of life. Let’s head on up to Level 2. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
-		<a-animation attribute="visible" begin="47000" to="true"></a-animation>
-		<a-animation attribute="visible" begin="67000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="47000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_graffiti_1.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="47000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="55000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="57000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="57000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_graffiti_2.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="57000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="65000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="67000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Mural Wall -->
+			<!-- Mural Wall -->
+			<a-entity id="dialogue" text="font: roboto; value: Here we have the MURAL WALL, this is the heart and soul of SIM, and it represents the various students pursuing different degrees and dreams, bringing together students from all walks of life. Let’s head on up to Level 2. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
+				<a-animation attribute="visible" begin="47000" to="true"></a-animation>
+				<a-animation attribute="visible" begin="67000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="47000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_graffiti_1.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="47000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="55000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="57000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="57000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_graffiti_2.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="57000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="65000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="67000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Mural Wall -->
 
-	<!-- Atrium -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="67000" to="true"></a-animation>
-		<a-entity id="dialogue" text="font: roboto; value: This is the atrium which will direct you further into campus. Straight ahead, we have the Heritage Gallery. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_atrium.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="67000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="74000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="76000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Atrium -->
+			<!-- Atrium -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="67000" to="true"></a-animation>
+				<a-entity id="dialogue" text="font: roboto; value: This is the atrium which will direct you further into campus. Straight ahead, we have the Heritage Gallery. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_atrium.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="67000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="74000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="76000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Atrium -->
 
-	<!-- Heritage Gallery -->
-	<a-entity id="dialogue" text="font: roboto; value: A little fun fact, SIM wasn’t necessarily a school before, it was initially a programme that helped equip managers with necessary skills to manage organisations successfully. It wasn’t until 2005 that it became the first private university dedicated to adult learners. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
-		<a-animation attribute="visible" begin="76000" to="true"></a-animation>
-		<a-animation attribute="visible" begin="99000" to="false"></a-animation>
-	</a-entity>
+			<!-- Heritage Gallery -->
+			<a-entity id="dialogue" text="font: roboto; value: A little fun fact, SIM wasn’t necessarily a school before, it was initially a programme that helped equip managers with necessary skills to manage organisations successfully. It wasn’t until 2005 that it became the first private university dedicated to adult learners. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
+				<a-animation attribute="visible" begin="76000" to="true"></a-animation>
+				<a-animation attribute="visible" begin="99000" to="false"></a-animation>
+			</a-entity>
 
-	<a-entity id="dialogue" text="font: roboto; value: Now, in 2017, SIM caters to changing needs of close to 41,000 individual and corporate members including a total enrolment of over 33,600 students across the globe! Isn’t that fantastic? ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
-		<a-animation attribute="visible" begin="99000" to="true"></a-animation>
-		<a-animation attribute="visible" begin="118000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="76000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gallery_2.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="76000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="84000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="86000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="86000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gallery_3.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="86000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="94000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="96000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="96000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gallery_4.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="96000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="104000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="106000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="106000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gallery_5.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="106000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="118000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="118000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Heritage Gallery -->
+			<a-entity id="dialogue" text="font: roboto; value: Now, in 2017, SIM caters to changing needs of close to 41,000 individual and corporate members including a total enrolment of over 33,600 students across the globe! Isn’t that fantastic? ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
+				<a-animation attribute="visible" begin="99000" to="true"></a-animation>
+				<a-animation attribute="visible" begin="118000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="76000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gallery_2.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="76000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="84000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="86000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="86000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gallery_3.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="86000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="94000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="96000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="96000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gallery_4.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="96000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="104000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="106000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="106000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gallery_5.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="106000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="118000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="118000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Heritage Gallery -->
 
-	<!-- Waterfall -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="118000" to="true"></a-animation>
-		<a-entity id="dialogue" text="font: roboto; value: As you make your way to the library, you will be greeted by a picturesque sight of our Waterfall. Snap it and share it. It is guaranteed to get you a barrage of likes on Instagram! ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_waterfall.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="118000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="131000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="133000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Waterfall -->
+			<!-- Waterfall -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="118000" to="true"></a-animation>
+				<a-entity id="dialogue" text="font: roboto; value: As you make your way to the library, you will be greeted by a picturesque sight of our Waterfall. Snap it and share it. It is guaranteed to get you a barrage of likes on Instagram! ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_waterfall.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="118000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="131000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="133000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Waterfall -->
 
-	<!-- Library -->
-	<a-entity id="dialogue" text="font: roboto; value: We are now at the main library at SIM. Tay Eng Soon Library has an extensive collection which is comprised of both print and non-print resources ranging from books and journals, to audio/video materials and training packages and a range of online databases and journals, linking students and SIM members to the realm of information. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
-		<a-animation attribute="visible" begin="133000" to="true"></a-animation>
-		<a-animation attribute="visible" begin="164000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="133000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_library_1.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="133000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="137000" dur="1000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="138000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="138000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_library_2.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="138000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="149000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="151000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="151000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_library_3.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="151000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="162000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="164000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Library -->
+			<!-- Library -->
+			<a-entity id="dialogue" text="font: roboto; value: We are now at the main library at SIM. Tay Eng Soon Library has an extensive collection which is comprised of both print and non-print resources ranging from books and journals, to audio/video materials and training packages and a range of online databases and journals, linking students and SIM members to the realm of information. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
+				<a-animation attribute="visible" begin="133000" to="true"></a-animation>
+				<a-animation attribute="visible" begin="164000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="133000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_library_1.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="133000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="137000" dur="1000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="138000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="138000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_library_2.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="138000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="149000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="151000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="151000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_library_3.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="151000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="162000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="164000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Library -->
 
-	<!-- Foodcourts & Snackshops -->
-	<a-entity id="dialogue" text="font: roboto; value: Now that we are done with food for the mind, let’s go get some food for our bellies! Foodclique and Foodnote provide students with everything from Western cuisine to Korean, Chinese and Malay cuisine, all at affordable prices and leaving you wanting to buy more! ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
-		<a-animation attribute="visible" begin="164000" to="true"></a-animation>
-		<a-animation attribute="visible" begin="187000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity id="dialogue" text="font: roboto; value: Running late for class and haven’t had anything to eat? Grab & Go has got you covered! They offer students quick bites, anything from fried foods to the sweet and savoury. If that’s not enough, The Buzz is a snack shop to help you from falling asleep during those long lectures! ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
-		<a-animation attribute="visible" begin="187000" to="true"></a-animation>
-		<a-animation attribute="visible" begin="209000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="164000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_foodcourt_1.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="164000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="174000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="176000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="176000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_foodcourt_2.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="176000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="185000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="187000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="187000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_snackshop_2.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="187000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="196000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="198000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="198000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_snackshop_1.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="198000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="207000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="209000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Foodcourts & Snackshops -->
+			<!-- Foodcourts & Snackshops -->
+			<a-entity id="dialogue" text="font: roboto; value: Now that we are done with food for the mind, let’s go get some food for our bellies! Foodclique and Foodnote provide students with everything from Western cuisine to Korean, Chinese and Malay cuisine, all at affordable prices and leaving you wanting to buy more! ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
+				<a-animation attribute="visible" begin="164000" to="true"></a-animation>
+				<a-animation attribute="visible" begin="187000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity id="dialogue" text="font: roboto; value: Running late for class and haven’t had anything to eat? Grab & Go has got you covered! They offer students quick bites, anything from fried foods to the sweet and savoury. If that’s not enough, The Buzz is a snack shop to help you from falling asleep during those long lectures! ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
+				<a-animation attribute="visible" begin="187000" to="true"></a-animation>
+				<a-animation attribute="visible" begin="209000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="164000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_foodcourt_1.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="164000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="174000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="176000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="176000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_foodcourt_2.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="176000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="185000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="187000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="187000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_snackshop_2.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="187000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="196000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="198000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="198000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_snackshop_1.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="198000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="207000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="209000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Foodcourts & Snackshops -->
 
-	<!-- Lecture Theatre -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="209000" to="true"></a-animation>
-		<a-entity id="dialogue" text="font: roboto; value: Speaking of lectures, SIM provides various spots to cater to your learning needs. This includes lecture theatres, classrooms, open study areas as well as computer labs. Here we are at one of the 38 Lecture theatres we have just in Block A alone. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_lecture.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="209000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="226000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="228000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Lecture Theatre -->
+			<!-- Lecture Theatre -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="209000" to="true"></a-animation>
+				<a-entity id="dialogue" text="font: roboto; value: Speaking of lectures, SIM provides various spots to cater to your learning needs. This includes lecture theatres, classrooms, open study areas as well as computer labs. Here we are at one of the 38 Lecture theatres we have just in Block A alone. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_lecture.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="209000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="226000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="228000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Lecture Theatre -->
 
-	<!-- Classroom -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="228000" to="true"></a-animation>
-		<a-entity id="dialogue" text="font: roboto; value: This is one of 31 classrooms we have, where most of your tutorials will be held. These classrooms may be open to students for revision purposes especially during exam period when the library and open study areas are packed. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_classroom.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="228000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="245000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="247000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Classroom -->
+			<!-- Classroom -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="228000" to="true"></a-animation>
+				<a-entity id="dialogue" text="font: roboto; value: This is one of 31 classrooms we have, where most of your tutorials will be held. These classrooms may be open to students for revision purposes especially during exam period when the library and open study areas are packed. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_classroom.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="228000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="245000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="247000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Classroom -->
+			
+			<!-- Com Lab -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="247000" to="true"></a-animation>
+				<a-entity id="dialogue" text="font: roboto; value: Here, we have our Computer lab, designed to meet the computing and communication needs for all students from every faculty. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block B/B_comlab.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="247000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="256000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="258000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Com Lab -->
+
+			<!-- Gym -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="258000" to="true"></a-animation>
+				<a-entity id="dialogue" text="font: roboto; value: We have arrived at the Student Gym! Our gym is well-equipped with top-notch exercise machinery, where students can work towards “Wellness and Fitness”. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gym_2.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="258000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="270000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="272000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Gym -->
+
+			<!-- Open Study Areas -->
+			<a-entity id="dialogue" text="font: roboto; value: Here are some hot spots within the SIM campus that many students flock to after a long day of lectures and tutorials. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
+				<a-animation attribute="visible" begin="272000" to="true"></a-animation>
+				<a-animation attribute="visible" begin="285000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="272000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_openstudyarea_1.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="272000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="276000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="278000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="278000" to="true"></a-animation>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_openstudyarea_2.jpg" rotation="0 -90 0">
+					<a-animation attribute="material.color" from="#000" to="#FFF" begin="278000" dur="2000"></a-animation>
+					<a-animation attribute="material.color" from="#FFF" to="#000" begin="283000" dur="2000"></a-animation>
+				</a-sky>
+				<a-animation attribute="visible" begin="285000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Open Study Areas -->
+
+			<!-- Hot Spots -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="285000" to="true"></a-animation>
+				<a-entity id="signs" text="font: roboto; value: Dance Studio; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
+				<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block D/D_dancestudio.jpg" rotation="0 -90 0"></a-sky>
+				<a-animation attribute="visible" begin="290000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="290000" to="true"></a-animation>
+				<a-entity id="signs" text="font: roboto; value: Sports Hall ; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
+				<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block D/D_sportshall.jpg" rotation="0 -90 0"></a-sky>
+				<a-animation attribute="visible" begin="295000" to="false"></a-animation>
+			</a-entity>
+
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="295000" to="true"></a-animation>
+				<a-entity id="signs" text="font: roboto; value: Wellness Centre; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
+				<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block C/C_wellness.jpg" rotation="0 -90 0"></a-sky>
+				<a-animation attribute="visible" begin="300000" to="false"></a-animation>
+			</a-entity>
+
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="300000" to="true"></a-animation>
+				<a-entity id="signs" text="font: roboto; value: Performing Theatre; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
+				<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block D/D_arts_2.jpg" rotation="0 -90 0"></a-sky>
+				<a-animation attribute="visible" begin="305000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="305000" to="true"></a-animation>
+				<a-entity id="signs" text="font: roboto; value: Tennis Court; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
+				<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block D/D_tenniscourt.jpg" rotation="0 -90 0"></a-sky>
+				<a-animation attribute="visible" begin="310000" to="false"></a-animation>
+			</a-entity>
+			
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="310000" to="true"></a-animation>
+				<a-entity id="signs" text="font: roboto; value: Interactive Lounge; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
+				<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block B/B_lounge.jpg" rotation="0 -90 0"></a-sky>
+				<a-animation attribute="visible" begin="315000" to="false"></a-animation>
+			</a-entity>
+
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="315000" to="true"></a-animation>
+				<a-entity id="signs" text="font: roboto; value: Gaming Area; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
+				<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
+				<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block B/B_dota.jpg" rotation="0 -90 0"></a-sky>
+				<a-animation attribute="visible" begin="320000" to="false"></a-animation>
+			</a-entity>
+			<!-- End Hot Spots -->
+
+			<!-- Final Quote -->
+			<a-entity visible="false">
+				<a-animation attribute="visible" begin="320000" to="true"></a-animation>
+				<a-sky color="#6EBAA7"></a-sky>
+				<a-entity id="signs" text="font: roboto; value: “What is the secret to success?; width: 5.7; align: center " position="0 2.5 -2" visible="false">
+					<a-animation attribute="visible" begin="323000" to="true"></a-animation>
+				</a-entity>
+				<a-entity id="signs" text="font: roboto; value: Making the right decision.; width: 5.7; align: center " position="0.2 2.2 -2" visible="false">
+					<a-animation attribute="visible" begin="326000" to="true"></a-animation>
+				</a-entity>
+				<a-entity id="signs" text="font: roboto; value: So make it, choose SIM.” ; width: 5.7; align: center " position="0.5 1.9 -2" visible="false">
+					<a-animation attribute="visible" begin="329000" to="true"></a-animation>
+				</a-entity>
+			</a-entity>
+			<!-- End Final Quote -->
+
+			<!-- Camera -->
+			<a-entity position="0 0 0">
+				<a-camera></a-camera>
+			</a-entity>
+
+		</a-scene>
 	
-	<!-- Com Lab -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="247000" to="true"></a-animation>
-		<a-entity id="dialogue" text="font: roboto; value: Here, we have our Computer lab, designed to meet the computing and communication needs for all students from every faculty. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block B/B_comlab.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="247000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="256000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="258000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Com Lab -->
-
-	<!-- Gym -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="258000" to="true"></a-animation>
-		<a-entity id="dialogue" text="font: roboto; value: We have arrived at the Student Gym! Our gym is well-equipped with top-notch exercise machinery, where students can work towards “Wellness and Fitness”. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_gym_2.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="258000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="270000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="272000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Gym -->
-
-	<!-- Open Study Areas -->
-	<a-entity id="dialogue" text="font: roboto; value: Here are some hot spots within the SIM campus that many students flock to after a long day of lectures and tutorials. ; height: 0.8 align: center; color: black" position="0 0.8 -1.2" visible="false">
-		<a-animation attribute="visible" begin="272000" to="true"></a-animation>
-		<a-animation attribute="visible" begin="285000" to="false"></a-animation>
-	</a-entity>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="272000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_openstudyarea_1.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="272000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="276000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="278000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="278000" to="true"></a-animation>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block A/A_openstudyarea_2.jpg" rotation="0 -90 0">
-			<a-animation attribute="material.color" from="#000" to="#FFF" begin="278000" dur="2000"></a-animation>
-			<a-animation attribute="material.color" from="#FFF" to="#000" begin="283000" dur="2000"></a-animation>
-		</a-sky>
-		<a-animation attribute="visible" begin="285000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Open Study Areas -->
-
-	<!-- Hot Spots -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="285000" to="true"></a-animation>
-		<a-entity id="signs" text="font: roboto; value: Dance Studio; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
-		<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block D/D_dancestudio.jpg" rotation="0 -90 0"></a-sky>
-		<a-animation attribute="visible" begin="290000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="290000" to="true"></a-animation>
-		<a-entity id="signs" text="font: roboto; value: Sports Hall ; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
-		<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block D/D_sportshall.jpg" rotation="0 -90 0"></a-sky>
-		<a-animation attribute="visible" begin="295000" to="false"></a-animation>
-	</a-entity>
-
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="295000" to="true"></a-animation>
-		<a-entity id="signs" text="font: roboto; value: Wellness Centre; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
-		<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block C/C_wellness.jpg" rotation="0 -90 0"></a-sky>
-		<a-animation attribute="visible" begin="300000" to="false"></a-animation>
-	</a-entity>
-
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="300000" to="true"></a-animation>
-		<a-entity id="signs" text="font: roboto; value: Performing Theatre; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
-		<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block D/D_arts_2.jpg" rotation="0 -90 0"></a-sky>
-		<a-animation attribute="visible" begin="305000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="305000" to="true"></a-animation>
-		<a-entity id="signs" text="font: roboto; value: Tennis Court; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
-		<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block D/D_tenniscourt.jpg" rotation="0 -90 0"></a-sky>
-		<a-animation attribute="visible" begin="310000" to="false"></a-animation>
-	</a-entity>
-	
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="310000" to="true"></a-animation>
-		<a-entity id="signs" text="font: roboto; value: Interactive Lounge; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
-		<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block B/B_lounge.jpg" rotation="0 -90 0"></a-sky>
-		<a-animation attribute="visible" begin="315000" to="false"></a-animation>
-	</a-entity>
-
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="315000" to="true"></a-animation>
-		<a-entity id="signs" text="font: roboto; value: Gaming Area; width: 5.7; align: center " position="0 2.5 -2"></a-entity>
-		<a-entity geometry="width:0.01" position="0 2.5 -2.01" rotation="0 90 0" scale="1 0.4 2.3" material="opacity:0.4; color:#000000;"></a-entity>
-		<a-sky crossorigin src="https://zachary545.github.io/sim/www/assets/vr_images/Block B/B_dota.jpg" rotation="0 -90 0"></a-sky>
-		<a-animation attribute="visible" begin="320000" to="false"></a-animation>
-	</a-entity>
-	<!-- End Hot Spots -->
-
-	<!-- Final Quote -->
-	<a-entity visible="false">
-		<a-animation attribute="visible" begin="320000" to="true"></a-animation>
-		<a-sky color="#6EBAA7"></a-sky>
-		<a-entity id="signs" text="font: roboto; value: “What is the secret to success?; width: 5.7; align: center " position="0 2.5 -2" visible="false">
-			<a-animation attribute="visible" begin="323000" to="true"></a-animation>
-		</a-entity>
-		<a-entity id="signs" text="font: roboto; value: Making the right decision.; width: 5.7; align: center " position="0.2 2.2 -2" visible="false">
-			<a-animation attribute="visible" begin="326000" to="true"></a-animation>
-		</a-entity>
-		<a-entity id="signs" text="font: roboto; value: So make it, choose SIM.” ; width: 5.7; align: center " position="0.5 1.9 -2" visible="false">
-			<a-animation attribute="visible" begin="329000" to="true"></a-animation>
-		</a-entity>
-	</a-entity>
-	<!-- End Final Quote -->
-
-	<!-- Camera -->
-	<a-entity position="0 0 0">
-		<a-camera></a-camera>
-	</a-entity>
-
-  </a-scene>
+  </body>
+</html>

@@ -49,7 +49,7 @@
 			<div class="col-md-4 text-center top-text">
 				<h2>App Demo</h2>
 				<br/>
-				<h4>App Demo is not optimised on desktop, it works best as a mobile application. The 360°/VR Functionality does not work well in browser, since the audio file is very large.</h4>
+				<h4>App Demo is not optimised on desktop, it works best as a mobile application. The 360°/VR Functionality does not work well in browser, since the audio file is very large. See the VR Demo below.</h4>
 			</div>
 			  
 			  <div class="col-md-4 text-center">
@@ -63,12 +63,14 @@
 			</div>
 		</div>
 		
-		<div class="sectionFour">
-			<button id='play' type="button" class="btn btn-danger btn-lg" onclick="addScene()">Play</button>
-			<div id='scene'>
-				
-			</div>
-		  
+		<div class="sectionFour" id="scene">
+			<br/><br/><br/>
+			<h2>VR Demo</h2>
+			<br/>
+			<h4>Click the Play button to start the SIM Campus Tour</h4>
+			<br/>
+			<button id="play" type="button" class="btn btn-danger btn-lg" onclick="addScene()">Play</button>
+			
 		</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -78,7 +80,7 @@
 	
 	<script>
 		function addScene(){
-			$('#scene').load('./scene.html');
+			document.getElementById("scene").innerHTML='<object type="text/html" data="scene.html" ></object>';
 			document.getElementById("play").style.display = "none";
 		}
 	</script>
