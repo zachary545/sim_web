@@ -6,118 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Explore! SIM Global</title>
-
-    <!-- Bootstrap -->
+	
+	<!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-	<style>
-		html, body {
-		  height: 100%;
-		}
-		body {
-		  color: #fff;
-		  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-		}
-		.top-text { 
-			padding-top: 100px; 
-			align: center;
-		}
-		.top-image { 
-			padding-left: 50px;
-		}
-		.sectionOne {
-			height: 100%;
-			background-color: #34495e;
-			padding: 20px;
-			overflow: auto;
-		}
-		.sectionTwo {
-			height: 100%;
-			background-color: #c0392b;
-			padding: 20px;
-			padding-top: 80px;
-			overflow: auto;
-		}
-		.sectionThree {
-			height: 100%;
-			background-color: #2980b9;
-			overflow: auto;
-		}
-		iframe {
-			width:100%;
-			border:none;
-			display: block;
-			margin: 0;
-			padding: 0;
-			min-height:580px;
-			height:auto !important;
-			height:580px;
-		}
-		::-webkit-scrollbar { 
-			display: none; 
-		}
-	</style>
+	<link href="css/main.css" rel="stylesheet">
+	
+	<script src="js/aframe-v0.5.0.min.js"></script>
 
   </head>
   <body>
-	<div class="sectionOne">
-		<div class="row">
-		  <div class="col-md-4 top-text">
-		  <br/><br/>
-		  <img src="./banner_1.png" class="img-responsive">
-		  
-		  </div>
-		  <div class="col-md-8 top-image">
-			  <img src="./banner_2.png" class="img-responsive">
-		  </div>
-		</div>
-	</div>
-	
-	
-	<div class="sectionTwo">
-		<div class="row">
-			<div class="col-md-6 text-center">
-				<h3>Basic Functions</h3><br/><br/>
-				<div align="center" class="embed-responsive embed-responsive-16by9">
-					<video controls loop class="embed-responsive-item">
-						<source src="./video/app_preview_basic.mp4" type="video/mp4">
-					</video>
-				</div>
-			</div>
-			<div class="col-md-6 text-center">
-				<h3>VR Function</h3><br/><br/>
-				<div align="center" class="embed-responsive embed-responsive-16by9">
-					<video controls loop class="embed-responsive-item">
-						<source src="./video/" type="video/mp4">
-					</video>
-				</div>
+		<div class="sectionOne">
+			<div class="row">
+			  <img src="./banner.png" class="img-responsive center-block">
 			</div>
 		</div>
-	</div>
-	
-	<div class="sectionThree">
-		<div class="row">
 		
-		<div class="col-md-4 text-center top-text">
-			<h2>App Demo</h2>
-			<br/>
-			<h4>App Demo is not optimised on desktop, it works best as a mobile application. The 360°/VR Functionality does not work well in browser, since the audio file is very large.</h4>
+		<div class="sectionTwo">
+			<div class="row">
+				<div class="col-md-6 text-center">
+					<h3>Basic Functions</h3><br/><br/>
+					<div align="center" class="embed-responsive embed-responsive-16by9">
+						<video controls loop class="embed-responsive-item">
+							<source src="./video/app_preview_basic.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<div class="col-md-6 text-center">
+					<h3>VR Function</h3><br/><br/>
+					<div align="center" class="embed-responsive embed-responsive-16by9">
+						<video controls loop class="embed-responsive-item">
+							<source src="./video/" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
 		</div>
+		
+		
+		<div class="sectionThree">
+			<div class="row">
+			
+			<div class="col-md-4 text-center top-text">
+				<h2>App Demo</h2>
+				<br/>
+				<h4>App Demo is not optimised on desktop, it works best as a mobile application. The 360°/VR Functionality does not work well in browser, since the audio file is very large.</h4>
+			</div>
+			  
+			  <div class="col-md-4 text-center">
+				  <h3>Android</h3>
+				  <iframe src="https://zachary545.github.io/sim/www/?production=true&ionicplatform=md"></iframe>
+			  </div>
+			  <div class="col-md-4 text-center">
+				  <h3>iOS</h3>
+				  <iframe src="https://zachary545.github.io/sim/www/?production=true&ionicplatform=ios"></iframe>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="sectionFour">
+			<button id='play' type="button" class="btn btn-danger btn-lg" onclick="addScene()">Play</button>
+			<div id='scene'>
+				
+			</div>
 		  
-		  <div class="col-md-4 text-center">
-			  <h3>Android</h3>
-			  <iframe src="https://zachary545.github.io/sim/www/?production=true&ionicplatform=md"></iframe>
-		  </div>
-		  <div class="col-md-4 text-center">
-			  <h3>iOS</h3>
-			  <iframe src="https://zachary545.github.io/sim/www/?production=true&ionicplatform=ios"></iframe>
-		  </div>
 		</div>
-	</div>
-	
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<script>
+		function addScene(){
+			$('#scene').load('./scene.html');
+			document.getElementById("play").style.display = "none";
+		}
+	</script>
   </body>
 </html>
